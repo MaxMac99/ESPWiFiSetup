@@ -1,0 +1,15 @@
+{
+    "name": "WiFiSetup",
+    "version": "1.0.0",
+    "keywords": "wifi, setup",
+    "description": "Connect ESP to WiFi network via AP",
+    "authors": {
+        "name": "Max Vissing",
+        "email": "max_vissing@yahoo.de"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://gitlab.com/maxmac99/esp-wifi-setup.git"
+    },
+    "platforms": "espressif8266"
+}
