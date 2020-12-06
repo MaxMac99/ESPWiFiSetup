@@ -19,10 +19,11 @@ void WiFiSetup::start(bool untilConnected) {
     WiFi.persistent(false);
     WiFi.mode(WIFI_STA);
 
-    if (ssid != "") {
-        if (connectWifi(ssid, password) == WL_CONNECTED) {
-            return;
+    if (connectWifi(ssid, password) == WL_CONNECTED) {
+        if (ssid != WiFi.SSID()) {
+            changeCallback(WiFi.SSID(), WiFi.psk());
         }
+        return;
     }
 
     startConfigPortal(hostname);
